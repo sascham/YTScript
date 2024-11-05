@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.jumbotron {
+    background-color: #f8f9fa;
+}
+
+.list-group-item {
+    margin-bottom: 5px;
+}
+
+.alert {
+    margin-top: 20px;
+}
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin: 10px 0;
+    position: relative;
+    height: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 4px;
+    width: 0; /* Start at 0% and update with JS */
+    transition: width 0.3s ease;
+}

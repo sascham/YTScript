@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Download Transcripts</h1>
+<form method="post" id="download-form">
+    <div class="form-group">
+        <label for="channel_input">Channel ID, Handle, or URL:</label>
+        <input type="text" class="form-control" id="channel_input" name="channel_input" required>
+    </div>
+    <div class="form-group" id="monthsDiv">
+        <label for="months">Select Timeframe:</label>
+        <select class="form-control" id="months" name="months">
+            <option value="1">1 month</option>
+            <option value="2">2 months</option>
+            <option value="3">3 months</option>
+            <option value="5">5 months</option>
+            <option value="all" selected>All</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Download</button>
+</form>
+<!-- Loading Spinner and Progress Bar -->
+<div id="loading-spinner" class="text-center mt-4" style="display: none;">
+    <p><strong>In progress.</strong> This can take a few minutes depending on the channel size.</p>
+    <div class="progress">
+        <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+             style="width: 0%;"></div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="display-4">Download Progress</h1>
+    
+    <div id="log-container" class="card mt-3">
+        <div class="card-header">
+            <h2>Log Output</h2>
+        </div>
+
+        <!-- Fixed header section for initial logs -->
+        <div class="card-body border-bottom" id="fixed-header" style="background-color: #f8f9fa;">
+            <div id="initial-log-messages" style="font-weight: bold; color: #007bff;">
+                <!-- Fixed log messages will be populated here -->
+            </div>
+        </div>
+
+        <!-- Scrollable log section for the rest of the logs -->
+        <div class="card-body" id="log-messages" style="max-height: 400px; overflow-y: auto;">
+            <!-- Dynamic log messages will be displayed here -->
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<script src="{{ url_for('static', filename='main.js') }}"></script>

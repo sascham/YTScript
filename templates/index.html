@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to the Transcript Downloader</h1>
+    <p class="lead">Download and manage transcripts from YouTube channels.</p>
+    <hr class="my-4">
+    <p>Use the navigation bar to download transcripts or view downloaded channels.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('download') }}" role="button">Get Started</a>
+</div>
+{% endblock %}
